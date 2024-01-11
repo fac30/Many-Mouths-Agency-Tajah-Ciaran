@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAC30 Project 1 - Tajah and Ciaran </title>
+    <link rel="Stylesheet" href="styling.css"/>
+</head>
+<body>
+    <header>
+        <main>
+            <nav>
+                <a href="Home">Home</a>
+                <a href="About">About Us</a>
+                <a href="Writers">Our Authors</a>
+                <a href="Agents">Our Agents</a>
+                <a href="Submit">Submissions</a>
+                <a href="Contact">Contact Us</a>
+              </nav>
+            <!--I've written some stuff for the nav sections below, we can sort out making it link to navbar after-->
+            <h1>Many Mouths Literary Agency</h1>
+            <p>Where the world's stories come to life</p>
+    </header>
+   
+        <section>
+            <h2>About Us</h2>
+            <div>
+            <p>Many Mouths started out with one single mission - to bring stories relegated to the background to the forefront of the literary world. We have been representing award-winning talent for the last 30 years, and have no signs of stopping. We have sicne expanded our roster to include screenwriters.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Our Authors</h2>
+            <p>We represent authors writing across a variety of genres, from Science-Fiction to Romance.</p>
+            <div>Author 1 Book Cover</div>
+            <div>Author 2 Book Cover</div>
+            <div>Author 3 Book Cover</div>
+            <!--Was thinking the book covers could be on a carousel?-->
+        </section>
+        <section>
+            <h2>Our Agents</h2>
+            <div>
+                <div>
+                    <p>Agent 1</p>
+                </div>
+                <div>
+                    <p>Agent 2</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Submissions</h2>
+            <p>We strive to make our submissions process as straightforward as possible. Please fill out the contact form below, and a member of our team will get back to you if we would like to learn more about your story.</p>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name"> 
+
+                <label for="email">Email Address</label>
+                 <input type="email" id="email" name="email">
+
+                <label for="tel">Contact Number</label>
+                <input type="tel" id="tel" name="tel">
+     
+                <label for="contactType">What is your preferred method of contact?</label>
+                 <div>
+                    <input type="radio" name="contact" value="email" id="choice1">
+                    <label for="choice1">Email</label>
+                    <input type="radio" name="contact" value="Telephone" id="choice2">
+                    <label for="choice2">Telephone</label>
+                    <input type="radio" name="contact" value="Post" id="choice3">
+                    <label for="choice3">Post</label>
+                </div>
+                <!--I want to change this to max 2000 words when we get started on the javascript bit-->
+                <label for="textbox">Please add your 5000 character synopsis here</label>
+                <textarea id="synopsis" name="synopsis" minlength="1" maxlength="5000"></textarea>
+    
+                <label for="marketingConsent">Do you consent to marketing from Many Mouths? (We will only send you literary information)</label>
+                <input type="checkbox" id="marketingConsent" name="marketingConsent">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section>
+            <h2>Contact Us</h2> 
+            <div>
+                <h3>Address</h3>
+                <ul>
+                    <!--Please remove the bullet points-->
+                    <li>Writer's House</li>
+                    <li>Imaginary Avenue</li>
+                    <li>London F4 K3</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Email Address</h3>
+                <p>Many-Mouths-Queries@fakeemail.com</p>
+            </div>
+        </section>
+    </main>
+    <blockquote>"A story heard is a story shared" - Anon</blockquote>
+    <footer>Created by Ciaran and Tajah - FAC30a</footer>
+</body>
+</html>
