@@ -1,0 +1,72 @@
+/* Settings */
+
+:root {
+    --grey: #F2F1EB;
+    --beige: #EEE7DA;
+    --l-green: #AFC8AD;
+    --d-green: #88AB8E;
+    --headings: 'Cormorant Garamond', serif;;
+    --paras: 'Manrope', sans-serif;;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--d-green);
+}
+
+body {
+    background-color: var(--grey);
+}
+
+footer {
+    background-color: var(--d-green);
+}
+
+h1, h2, h3 {
+    font-family: var(--headings);
+}
+
+p {
+    font-family: var(--paras);
+}
+
+ul {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+    color: #F2F1EB
+}
+
+
+/* Heading */ 
+
+.logo {
+    font-family: var(--headings);
+}
+
+/* About Section */
+
+
+/* Authors Section */
+
+
+/* Agents Section */
+
+
+/* Submissions Section */
+
+
+/* Contact Section */
+
+
+/* Footer */ 
+
+
+/* Media Queries */
