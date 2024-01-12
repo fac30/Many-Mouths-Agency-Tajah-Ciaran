@@ -1,4 +1,6 @@
-/* Settings */
+/*------------------------
+Settings 
+------------------------*/
 
 :root {
     --grey: #F2F1EB;
@@ -41,32 +43,87 @@ ul {
   
 a {
     text-decoration: none;
+    cursor: pointer;
     color: #F2F1EB
 }
 
 
-/* Heading */ 
+/*------------------------
+Navigation 
+------------------------*/
+
+nav {
+    padding: 1rem;
+}
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.4rem 0rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 2rem 0rem 1.5rem 0rem;
+}
+
+.nav-item {
     font-family: var(--headings);
 }
 
-/* About Section */
+.nav-item::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #AB88A5;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-item:hover::after {
+    width: 60%;
+  }
+
+/*------------------------
+About Section
+------------------------*/
 
 
-/* Authors Section */
+/*------------------------
+Authors Section
+------------------------*/
 
 
-/* Agents Section */
+/*------------------------
+Agents Section
+------------------------*/
 
 
-/* Submissions Section */
+/*------------------------
+Submissions Section
+------------------------*/
 
 
-/* Contact Section */
+/*------------------------
+Contact Section
+------------------------*/
 
 
-/* Footer */ 
+/*------------------------
+Footer
+------------------------*/ 
 
 
-/* Media Queries */
+/*------------------------
+Media Queries
+------------------------*/
