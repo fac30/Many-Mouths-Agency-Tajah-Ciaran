@@ -1,0 +1,129 @@
+/*------------------------
+Settings 
+------------------------*/
+
+:root {
+    --grey: #F2F1EB;
+    --beige: #EEE7DA;
+    --l-green: #AFC8AD;
+    --d-green: #88AB8E;
+    --headings: 'Cormorant Garamond', serif;;
+    --paras: 'Manrope', sans-serif;;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--d-green);
+}
+
+body {
+    background-color: var(--grey);
+}
+
+footer {
+    background-color: var(--d-green);
+}
+
+h1, h2, h3 {
+    font-family: var(--headings);
+}
+
+p {
+    font-family: var(--paras);
+}
+
+ul {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #F2F1EB
+}
+
+
+/*------------------------
+Navigation 
+------------------------*/
+
+nav {
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.4rem 0rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 2rem 0rem 1.5rem 0rem;
+}
+
+.nav-item {
+    font-family: var(--headings);
+}
+
+.nav-item::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #AB88A5;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-item:hover::after {
+    width: 60%;
+  }
+
+/*------------------------
+About Section
+------------------------*/
+
+
+/*------------------------
+Authors Section
+------------------------*/
+
+
+/*------------------------
+Agents Section
+------------------------*/
+
+
+/*------------------------
+Submissions Section
+------------------------*/
+
+
+/*------------------------
+Contact Section
+------------------------*/
+
+
+/*------------------------
+Footer
+------------------------*/ 
+
+
+/*------------------------
+Media Queries
+------------------------*/
