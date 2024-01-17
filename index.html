@@ -37,13 +37,15 @@
             <!--I've written some stuff for the nav sections below, we can sort out making it link to navbar after-->
     </header>
     <script src="index.js"></script>
-    <p class="slogan">"Where the world's stories come to life."</p>
     
         <!------------ About Section ------------>
         <section class="about-section">
             <h2>About Us</h2>
             <div>
-            <p>Many Mouths started out with one single mission - to bring stories relegated to the background to the forefront of the literary world. We have been representing award-winning talent for the last 30 years, and have no signs of stopping. We have sicne expanded our roster to include screenwriters.</p>
+            <p>Many Mouths started out with one single mission - to bring stories relegated to the background to the forefront of the literary world. We have been representing award-winning talent for the last 30 years, and have no signs of stopping.</p>
+            <a href="public/about.html">
+            <button class="about-button">READ MORE</button>
+            </a>
             </div>
         </section>
 
@@ -51,9 +53,27 @@
         <section class="authors-section">
             <h2>Our Authors</h2>
             <p>We represent authors writing across a variety of genres, from Science-Fiction to Romance.</p>
-            <div>Author 1 Book Cover</div>
-            <div>Author 2 Book Cover</div>
-            <div>Author 3 Book Cover</div>
+            <div class="home-book-covers">
+            <div class="home-book-cover1">
+                <img src="img/Book Cover 1.png" alt="Sword book by Samuel Raita">
+                <p>Sword by Samuel Raita</p>
+            </div>
+            <div class="home-book-cover2">
+                <img src="img/Book Cover 2.png" alt="Lagom book by Ashley Wilson">
+                <p>Lagom by Ashley Wilson</p>              
+            </div>
+            <div class="home-book-cover3">
+                <img src="img/Book Cover 3.png" alt="The Story of the Tree book by Steffan Wienburg">
+                <p>The Story of the Tree by Steffan Wienburg</p>
+            </div>
+            <div class="home-book-cover4">
+                <img src="img/Book Cover 4.png" alt="Mind Blown: Unleashing Creativity book by Susan Williams">
+                <p>Mind Blown: Unleashing Creativity by Susan Williams</p>
+            </div>
+            </div>
+            <a href="public/authors.html">
+                <button class="authors-button">SEE MORE</button>
+                </a>
             <!--Was thinking the book covers could be on a carousel?-->
         </section>
 
@@ -74,6 +94,7 @@
         <section class="submissions-section">
             <h2>Submissions</h2>
             <p>We strive to make our submissions process as straightforward as possible. Please fill out the contact form below, and a member of our team will get back to you if we would like to learn more about your story.</p>
+            <!-- 
             <form>
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name"> 
@@ -93,7 +114,8 @@
                     <input type="radio" name="contact" value="Post" id="choice3">
                     <label for="choice3">Post</label>
                 </div>
-                <!--I want to change this to max 2000 words when we get started on the javascript bit-->
+            
+                I want to change this to max 2000 words when we get started on the javascript bit
                 <label for="textbox">Please add your 5000 character synopsis here</label>
                 <textarea id="synopsis" name="synopsis" minlength="1" maxlength="5000"></textarea>
     
@@ -101,6 +123,7 @@
                 <input type="checkbox" id="marketingConsent" name="marketingConsent">
                 <input type="submit" value="Submit">
             </form>
+        -->
         </section>
 
         <!------------- Contact Section ------------>
@@ -123,6 +146,9 @@
     <blockquote>"A story heard is a story shared" - Anon</blockquote>
 
     <!------------- Footer ------------>
-    <footer>Created by Ciaran and Tajah - FAC30a</footer>
+    <footer>
+        <p class="slogan">"Where the world's stories come to life."</p>
+        <p>Created by Ciaran and Tajah - FAC30a</p>
+    </footer>
 </body>
 </html>
