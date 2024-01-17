@@ -3,178 +3,365 @@ Settings
 ------------------------*/
 
 :root {
-    --grey: #F2F1EB;
-    --beige: #EEE7DA;
-    --l-green: #AFC8AD;
-    --d-green: #88AB8E;
-    --headings: 'Cormorant Garamond', serif;;
-    --paras: 'Manrope', sans-serif;;
+  --grey: #f2f1eb;
+  --beige: #eee7da;
+  --l-green: #afc8ad;
+  --green: #88ab8e;
+  --d-green: #435f48;
+  --headings: "Cormorant Garamond", serif;
+  --paras: "Manrope", sans-serif;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
-    background-color: var(--d-green);
+  background-color: var(--green);
 }
 
 body {
-    background-color: var(--grey);
+  background-color: var(--grey);
 }
 
 footer {
-    background-color: var(--d-green);
+  background-color: var(--green);
 }
 
-h1, h2, h3 {
-    font-family: var(--headings);
+h1,
+h2,
+h3 {
+  font-family: var(--headings);
 }
 
 p {
-    font-family: var(--paras);
+  font-family: var(--paras);
 }
 
 ul {
-    list-style: none;
-}
-  
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: #F2F1EB
+  list-style: none;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #f2f1eb;
+}
 
 /*------------------------
 Navigation 
 ------------------------*/
 
 nav {
-    padding: 1rem;
+  padding: 0.8rem;
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.4rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 190px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.4rem 0rem;
 }
 
 .nav-menu {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    padding: 2rem 0rem 1.5rem 0rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 1.5rem 0rem 1.5rem 0rem;
 }
 
 .nav-item {
-    font-family: var(--headings);
+  font-family: var(--headings);
+  text-shadow: 2px 4px 6px #4a5759;
 }
 
 .nav-item::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #AB88A5;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #ab88a5;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-item:hover::after {
+  width: 60%;
+}
+
+/*------------------------
+Navigation Media Queries
+------------------------*/
+
+@media (min-width: 389px) {
+  .nav-item {
+    padding: 0rem 0.5rem;
   }
-  
-  .nav-item:hover::after {
-    width: 60%;
+}
+
+@media (min-width: 760px) {
+  .logo {
+    height: 210px;
+    width: 200px;
   }
+  .nav-menu {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .logo {
+    height: 230px;
+    width: 220px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .logo {
+    height: 250px;
+    width: 240px;
+  }
+}
 
 /*------------------------
 About Section
 ------------------------*/
 
-.about-section{
-    padding: 5%;
+.about-section {
+  padding: 3rem 10%;
+}
+
+.about-section h2 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+.about-section p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.about-section button {
+  background-color: var(--green);
+  color: var(--grey);
+  font-family: var(--paras);
+  font-weight: 700;
+  margin: 2rem 0rem;
+  padding: 6px 32px;
+  border: 1px solid var(--green);
+  letter-spacing: 0.5px;
+  box-shadow: 2px 3px 3px var(--d-green);
+}
+
+.about-section button:hover {
+  box-shadow: none;
+  transition: all 0.5s;
+}
+
+/*------------------------
+About Section Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .about-section {
+    padding: 5rem 14%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .about-section h2 {
+    font-size: 34px;
+  }
+  .about-section p {
+    font-size: 16px;
+  }
+  .about-section button {
+    padding: 10px 38px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-section {
+    padding: 7rem 16%;
+  }
+  .about-section h2 {
+    font-size: 34px;
+  }
+  .about-section p {
+    font-size: 16px;
+  }
+  .about-section button {
+    padding: 10px 38px;
+  }
 }
 
 /*------------------------
 Authors Section
 ------------------------*/
-.authors-section{
-    padding: 5%;
+
+.authors-section {
+  padding: 3rem 10%;
+}
+
+.authors-section h2 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+.authors-section p {
+  padding: 0rem 0rem 3rem 0rem;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.home-book-covers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-book-covers img {
+  border: 2px solid #435f48;
+}
+
+.home-book-cover3 p {
+  font-size: 12px;
+  padding: 0rem 0rem 2rem 0rem;
+}
+
+.home-book-cover4 {
+  display: none;
+}
+
+.home-book-cover4 p {
+  font-size: 10px;
+  padding: 0rem 0rem 2rem 0rem;
+}
+
+.authors-section button {
+  background-color: var(--green);
+  color: var(--grey);
+  font-family: var(--paras);
+  font-weight: 700;
+  padding: 6px 32px;
+  border: 1px solid var(--green);
+  letter-spacing: 0.5px;
+  box-shadow: 2px 3px 3px var(--d-green);
+}
+
+/*------------------------
+Authors Section Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .authors-section {
+    padding: 5rem 14%;
+  }
+  .home-book-covers {
+    display: grid;
+    grid: 30%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .home-book-cover4 {
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  .authors-section h2 {
+    font-size: 34px;
+  }
+  .authors-section p {
+    font-size: 16px;
+  }
+  .authors-section button {
+    padding: 10px 38px;
+  }
+}
+
+@media (min-width: 1400px) {
+  
 }
 
 /*------------------------
 Agents Section
 ------------------------*/
-.agents-section{
-    padding: 5%;
+.agents-section {
+  padding: 5%;
 }
 
 /*------------------------
 Submissions Section
 ------------------------*/
-.submissions-section{
-    padding: 5%;
+.submissions-section {
+  padding: 5%;
+  background-color: var(--d-green);
 }
-
 
 /*------------------------
 Text area - submission
 ------------------------*/
-fieldset{
-    border: 2px solid var(--l-green);
-    margin: 2em;
-    padding: 1em 2em;
-    min-width: 200px;
+fieldset {
+  border: 2px solid var(--l-green);
+  margin: 2em;
+  padding: 1em 2em;
+  min-width: 200px;
 }
 
-label{
-    display: flex;
-    margin-top: 1em;
+label {
+  display: flex;
+  margin-top: 1em;
 }
 
-label:first-of-type{
-    margin-top: 0;
+label:first-of-type {
+  margin-top: 0;
 }
 
-input{
-    padding: 0.5em;
-    border: solid var(--l-green);
+input {
+  padding: 0.5em;
+  border: solid var(--l-green);
 }
 
-textarea{
-    min-height: 8em;
-    min-width: 100%;
-    padding: 0.5em;
-    border: solid var(--l-green);
+textarea {
+  min-height: 8em;
+  min-width: 100%;
+  padding: 0.5em;
+  border: solid var(--l-green);
 }
 
 /*------------------------
 Contact Section
 ------------------------*/
-.contact-section{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
-    font-family: var(--paras);
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  font-family: var(--paras);
 }
 
-.contact-section > * + *{
-    margin-bottom: 5%;
+.contact-section > * + * {
+  margin-bottom: 5%;
 }
 /*------------------------
 Footer
-------------------------*/ 
-
+------------------------*/
 
 /*------------------------
 Media Queries
