@@ -992,3 +992,88 @@ Submissions Page Media Queries
     font-size: 18px;
   }
 }
+
+/*------------------------
+Contact Page
+------------------------*/
+
+.contact-page-section {
+  padding: 3rem 10%;
+}
+
+.contact-page-section h2 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+.contact-page-section p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.contact-page-section button {
+  background-color: var(--green);
+  color: var(--grey);
+  font-family: var(--paras);
+  font-weight: 700;
+  padding: 6px 32px;
+  border: 1px solid var(--green);
+  letter-spacing: 0.5px;
+  box-shadow: 2px 3px 3px var(--d-green);
+}
+
+.contact-page-section button:hover {
+  box-shadow: none;
+  transition: all 0.5s;
+  font-size: 16px;
+}
+
+.contact-page-section a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/*------------------------
+Contact Page Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .contact-page-section {
+    padding: 5rem 14%;
+  }
+  .contact-page-section button {
+    padding: 10px 38px;
+    margin: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact-page-section h2 {
+    font-size: 34px;
+  }
+  .contact-page-section p {
+    font-size: 16px;
+  }
+  .contact-page-section button {
+    padding: 12px 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact-page-section {
+    padding: 7rem 16%;
+  }
+  .contact-page-section h2 {
+    font-size: 36px;
+  }
+  .contact-page-section p {
+    font-size: 18px;
+  }
+  .contact-page-section button {
+    padding: 15px 42px;
+  }
+}
