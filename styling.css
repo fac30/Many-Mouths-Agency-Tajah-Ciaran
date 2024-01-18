@@ -18,6 +18,10 @@ Settings
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   background-color: var(--green);
 }
@@ -32,7 +36,8 @@ footer {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--headings);
 }
 
@@ -48,6 +53,54 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: #f2f1eb;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*------------------------
+Smooth Slide-In Animation (Left, Right and Up)
+------------------------*/
+
+.hide-animation-up {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(80%);
+  transition: all 1s;
+}
+
+.show-animation-up {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.hide-animation-right {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show-animation-right {
+  opacity: 1;
+  z-index: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hide-animation-left {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1s;
+}
+
+.show-animation-left {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
 
 /*------------------------
@@ -152,7 +205,7 @@ About Section
   letter-spacing: 0.5px;
 }
 
-.about-section button {
+.about-button {
   background-color: var(--green);
   color: var(--grey);
   font-family: var(--paras);
@@ -164,9 +217,10 @@ About Section
   box-shadow: 2px 3px 3px var(--d-green);
 }
 
-.about-section button:hover {
+.about-button:hover {
   box-shadow: none;
   transition: all 0.5s;
+  font-size: 16px;
 }
 
 /*------------------------
@@ -177,6 +231,9 @@ About Section Media Queries
   .about-section {
     padding: 5rem 14%;
   }
+  .about-button {
+    padding: 10px 38px;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -186,8 +243,8 @@ About Section Media Queries
   .about-section p {
     font-size: 16px;
   }
-  .about-section button {
-    padding: 10px 38px;
+  .about-button {
+    padding: 12px 40px;
   }
 }
 
@@ -199,10 +256,10 @@ About Section Media Queries
     font-size: 34px;
   }
   .about-section p {
-    font-size: 16px;
+    font-size: 18px;
   }
-  .about-section button {
-    padding: 10px 38px;
+  .about-button {
+    padding: 15px 42px;
   }
 }
 
@@ -220,7 +277,7 @@ Authors Section
   font-weight: 500;
 }
 
-.authors-section p {
+.authors-text {
   padding: 0rem 0rem 3rem 0rem;
   font-size: 14px;
   font-weight: 300;
@@ -228,31 +285,34 @@ Authors Section
 }
 
 .home-book-covers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
 }
 
 .home-book-covers img {
   border: 2px solid #435f48;
 }
 
-.home-book-cover3 p {
-  font-size: 12px;
-  padding: 0rem 0rem 2rem 0rem;
+.book-text {
+  background-color: var(--beige);
+  padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+  margin: 25px 0px 55px 0px;
+  font-size: 10px;
+  border-radius: 35px;
+  border: 2px solid var(--d-green);
 }
 
-.home-book-cover4 {
+.home-book-cover4, .book-text4{
   display: none;
 }
 
 .home-book-cover4 p {
-  font-size: 10px;
-  padding: 0rem 0rem 2rem 0rem;
+  font-size: 11px;
 }
 
-.authors-section button {
+.authors-button {
   background-color: var(--green);
   color: var(--grey);
   font-family: var(--paras);
@@ -261,6 +321,19 @@ Authors Section
   border: 1px solid var(--green);
   letter-spacing: 0.5px;
   box-shadow: 2px 3px 3px var(--d-green);
+}
+
+.authors-button:hover {
+  box-shadow: none;
+  transition: all 0.5s;
+  font-size: 16px;
+}
+
+.authors-section a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 /*------------------------
@@ -273,12 +346,22 @@ Authors Section Media Queries
   }
   .home-book-covers {
     display: grid;
-    grid: 30%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 50px;
   }
-  .home-book-cover4 {
+  .book-text {
+    padding: 3rem 2.5rem 3rem 2.5rem;
+    margin: 25px 0px 75px 0px;
+    font-size: 11px;
+    border-radius: 60px;
+  }
+  .home-book-cover4, .book-text4 {
     display: block;
+  }
+  .authors-button {
+    padding: 10px 38px;
+    margin: 50px;
   }
 }
 
@@ -286,31 +369,142 @@ Authors Section Media Queries
   .authors-section h2 {
     font-size: 34px;
   }
-  .authors-section p {
+  .authors-text {
     font-size: 16px;
   }
-  .authors-section button {
-    padding: 10px 38px;
+  .authors-button {
+    padding: 12px 40px;
+  }
+  .book-text {
+    padding: 3rem 2.5rem 3rem 2.5rem;
+    margin: 25px 0px 75px 0px;
+    font-size: 13px;
+    border-radius: 60px;
+    opacity: 30%;
+  }
+  .book-text:hover {
+    transition: 0.7s linear;
+    opacity: 100%;
+  }
+}
+
+@media (min-width: 1250px) {
+  .home-book-covers {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
 @media (min-width: 1400px) {
-  
-}
-
-/*------------------------
-Agents Section
-------------------------*/
-.agents-section {
-  padding: 5%;
+    .authors-section {
+      padding: 7rem 16%;
+    }
+    .authors-section h2 {
+      font-size: 34px;
+    }
+    .authors-text {
+      font-size: 18px;
+      padding: 0rem 0rem 5rem 0rem;
+    }
+    .home-book-covers {
+      gap: 50px;
+    }
+    .book-text {
+      padding: 4rem 3.5rem 4rem 3.5rem;
+      font-size: 15px;
+      border-radius: 60px;
+    }
+    .authors-button {
+      padding: 15px 42px;
+    }
 }
 
 /*------------------------
 Submissions Section
 ------------------------*/
-.submissions-section {
-  padding: 5%;
+
+.home-submissions-section {
+  margin: 3rem 0rem;
+  padding: 3rem 5%;
   background-color: var(--d-green);
+}
+
+.home-submissions-section h2 {
+  font-size: 26px;
+  color: var(--beige);
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.home-submissions-section p {
+  color: var(--beige);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.home-submissions-section button {
+  background-color: var(--green);
+  color: var(--grey);
+  font-family: var(--paras);
+  font-weight: 700;
+  padding: 6px 22px;
+  border: 1px solid var(--green);
+  letter-spacing: 0.5px;
+}
+
+.home-submissions-section button:hover {
+  transition: all 0.5s;
+  font-size: 16px;
+}
+
+.home-submissions-section a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/*------------------------
+Submissions Section Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .home-submissions-section {
+    padding: 3rem 14%;
+  }
+  .home-submissions-section button {
+    padding: 10px 38px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .home-submissions-section h2 {
+    font-size: 34px;
+  }
+  .home-submissions-section p {
+    font-size: 14px;
+  }
+  .home-submissions-section button {
+    padding: 12px 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-submissions-section {
+    padding: 5rem 16%;
+  }
+  .home-submissions-section h2 {
+    font-size: 36px;
+  }
+  .home-submissions-section p {
+    font-size: 16px;
+  }
+  .home-submissions-section button {
+    padding: 15px 42px;
+  }
 }
 
 /*------------------------
@@ -345,24 +539,239 @@ textarea {
 }
 
 /*------------------------
-Contact Section
+Agents Section
 ------------------------*/
-.contact-section {
+.agents-section {
+  padding: 3rem 10%;
+}
+
+.agents-section h2 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+.agents-text {
+  padding: 0rem 0rem 3rem 0rem;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.home-agent-profiles h4 {
+  padding: 16px 0px;
+  font-size: 15px;
+  border-bottom: 1px solid #435f48;
+}
+
+.home-agent-profiles h3 {
+  padding: 22px 0px;
+  font-size: 32px;
+  color: var(--d-green);
+}
+
+.agent-about-text p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.agents-section img {
+  width: 300px;
+  height: 400px;
+  margin-top: 50px;
+}
+
+.agents-button {
+  background-color: var(--green);
+  color: var(--grey);
+  font-family: var(--paras);
+  font-weight: 700;
+  padding: 6px 32px;
+  border: 1px solid var(--green);
+  letter-spacing: 0.5px;
+  box-shadow: 2px 3px 3px var(--d-green);
+}
+
+.agents-button:hover {
+  box-shadow: none;
+  transition: all 0.5s;
+  font-size: 16px;
+}
+
+.agents-section a {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
+  margin: 40px 0px 60px 0px;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--headings);
+  font-size: 21px;
+  padding: 0rem 0rem 3rem 0rem;
+  font-weight: 500;
+  color: var(--d-green);
+}
+
+/*------------------------
+Agents Section Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .agents-section {
+    padding: 5rem 14%;
+  }
+  .agents-button {
+    padding: 10px 38px;
+  }
+  .quote {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .agents-section h2 {
+    font-size: 34px;
+  }
+  .agents-text {
+    font-size: 16px;
+  }
+  .agents-button {
+    padding: 12px 40px;
+  }
+  .quote {
+    font-size: 29px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .agents-section {
+    padding: 7rem 16%;
+  }
+  .agents-section h2 {
+    font-size: 34px;
+  }
+  .agents-section img {
+    width: 350px;
+    height: 500px;
+    margin-top: 80px;
+  }
+  .agents-section h3 {
+    font-size: 38px;
+  }
+  .agents-text {
+    font-size: 18px;
+  }
+  .agents-button {
+    padding: 15px 42px;
+  }
+  .quote {
+    font-size: 32px;
+  }
+}
+
+/*------------------------
+Footer / Contact Section
+------------------------*/
+
+.contact-section {
+  padding: 3rem 10%;
+  margin-top: 2rem;
   font-family: var(--paras);
 }
 
-.contact-section > * + * {
-  margin-bottom: 5%;
+.footer-text {
+  color: var(--beige);
 }
-/*------------------------
-Footer
-------------------------*/
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5rem;
+}
+
+.social-link {
+  color: var(--beige);
+  padding: 8px;
+  border-radius: 250px;
+  font-size: 32px;
+}
+
+.social-link a {
+  transition: all 0.5s;
+}
+
+.social-link a:hover {
+  opacity: 0.5;
+}
+
+.contact-details {
+  color: var(--beige);
+}
+
+.contact-details h4 {
+  font-size: 22px;
+  border-bottom: 2px solid var(--d-green);
+  padding: 2rem 0rem 0.5rem 0rem;
+  margin: 16px 0px;
+}
+
+.contact-details h3 {
+  font-size: 19px;
+  margin: 16px 0px;
+}
+
+.email, .phone, .address {
+  font-size: 12px;
+  padding-bottom: 1rem;
+}
+
+.footer-bottom {
+  background-color: var(--d-green);
+  color: var(--beige);
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
 
 /*------------------------
-Media Queries
+Footer / Contact Section Media Queries
 ------------------------*/
+
+@media (min-width: 760px) {
+  .contact-section {
+    padding: 3rem 14%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact-section h4 {
+    font-size: 26px;
+  }
+  .email, .phone, .address {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact-section {
+    padding: 4rem 16%;
+  }
+  .contact-section h4 {
+    font-size: 30px;
+  }
+  .about-section p {
+    font-size: 18px;
+  }
+  .about-button {
+    padding: 15px 42px;
+  }
+}
