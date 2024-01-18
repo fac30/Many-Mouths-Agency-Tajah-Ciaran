@@ -910,3 +910,85 @@ Authors Page Media Queries
     padding: 15px 42px;
   }
 }
+
+/*------------------------
+Submissions Page
+------------------------*/
+
+.submissions-section {
+  padding: 3rem 10%;
+}
+
+.submissions-section h2 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+.submissions-section p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/*------------------------
+Submissions Form 
+------------------------*/
+fieldset {
+  border: 2px solid var(--l-green);
+  margin: 2em;
+  padding: 1em 2em;
+  min-width: 200px;
+}
+
+label {
+  display: flex;
+  margin-top: 1em;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+input {
+  padding: 0.5em;
+  border: solid var(--l-green);
+}
+
+textarea {
+  min-height: 8em;
+  min-width: 100%;
+  padding: 0.5em;
+  border: solid var(--l-green);
+}
+
+/*------------------------
+Submissions Page Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .submissions-section {
+    padding: 5rem 14%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .submissions-section h2 {
+    font-size: 34px;
+  }
+  .submissions-section p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .submissions-section {
+    padding: 7rem 16%;
+  }
+  .submissions-section h2 {
+    font-size: 36px;
+  }
+  .submissions-section p {
+    font-size: 18px;
+  }
+}
