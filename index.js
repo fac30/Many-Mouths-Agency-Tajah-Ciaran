@@ -25,3 +25,33 @@ const observer = new IntersectionObserver(entries => {
 
 const hiddenElements = document.querySelectorAll('.hide-animation-up, .hide-animation-left, .hide-animation-right');
 hiddenElements.forEach(el => observer.observe(el));
+
+
+// submission box 5000 word limit
+
+function limitWords(text, maxWords) {
+    const words = text.split(/\s+/);
+    const truncatedWords = words.slice(0, maxWords);
+    const truncatedText = truncatedWords.join(' ');
+    return truncatedText;
+}
+
+function limitAndDisplay() {
+    const inputText = document.getElementById('synopsis').value;
+    const maxWordsLimit = 1000;
+    const truncatedText = limitWords(inputText, maxWordsLimit);
+    updateWordCount();
+}
+
+function updateWordCount() {
+    const inputText = document.getElementById('synopsis').value;
+    const maxWordsLimit = 1000;
+    const words = inputText.split(/\s+/);
+    const wordCount = words.filter(word => word.trim() !== '').length;
+    
+    const wordsOverLimit = Math.max(0, wordCount - maxWordsLimit);
+    
+    document.getElementById('wordCount').innerText = `Word Count: ${wordCount} (${wordsOverLimit} words over the limit)`;
+}
+
+document.getElementById('synopsis').addEventListener('input', limitAndDisplay);
