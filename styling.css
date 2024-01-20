@@ -186,7 +186,7 @@ Navigation Media Queries
 }
 
 /*------------------------
-About Section
+Home About Section
 ------------------------*/
 
 .about-section {
@@ -224,7 +224,7 @@ About Section
 }
 
 /*------------------------
-About Section Media Queries
+Home About Section Media Queries
 ------------------------*/
 
 @media (min-width: 760px) {
@@ -253,7 +253,7 @@ About Section Media Queries
     padding: 7rem 16%;
   }
   .about-section h2 {
-    font-size: 34px;
+    font-size: 36px;
   }
   .about-section p {
     font-size: 18px;
@@ -264,7 +264,7 @@ About Section Media Queries
 }
 
 /*------------------------
-Authors Section
+Home Authors Section
 ------------------------*/
 
 .authors-section {
@@ -304,7 +304,8 @@ Authors Section
   border: 2px solid var(--d-green);
 }
 
-.home-book-cover4, .book-text4{
+.home-book-cover4,
+.book-text4 {
   display: none;
 }
 
@@ -337,7 +338,7 @@ Authors Section
 }
 
 /*------------------------
-Authors Section Media Queries
+Home Authors Section Media Queries
 ------------------------*/
 
 @media (min-width: 760px) {
@@ -356,7 +357,8 @@ Authors Section Media Queries
     font-size: 11px;
     border-radius: 60px;
   }
-  .home-book-cover4, .book-text4 {
+  .home-book-cover4,
+  .book-text4 {
     display: block;
   }
   .authors-button {
@@ -396,31 +398,31 @@ Authors Section Media Queries
 }
 
 @media (min-width: 1400px) {
-    .authors-section {
-      padding: 7rem 16%;
-    }
-    .authors-section h2 {
-      font-size: 34px;
-    }
-    .authors-text {
-      font-size: 18px;
-      padding: 0rem 0rem 5rem 0rem;
-    }
-    .home-book-covers {
-      gap: 50px;
-    }
-    .book-text {
-      padding: 4rem 3.5rem 4rem 3.5rem;
-      font-size: 15px;
-      border-radius: 60px;
-    }
-    .authors-button {
-      padding: 15px 42px;
-    }
+  .authors-section {
+    padding: 7rem 16%;
+  }
+  .authors-section h2 {
+    font-size: 36px;
+  }
+  .authors-text {
+    font-size: 18px;
+    padding: 0rem 0rem 5rem 0rem;
+  }
+  .home-book-covers {
+    gap: 50px;
+  }
+  .book-text {
+    padding: 4rem 3.5rem 4rem 3.5rem;
+    font-size: 15px;
+    border-radius: 60px;
+  }
+  .authors-button {
+    padding: 15px 42px;
+  }
 }
 
 /*------------------------
-Submissions Section
+Home Submissions Section
 ------------------------*/
 
 .home-submissions-section {
@@ -468,7 +470,7 @@ Submissions Section
 }
 
 /*------------------------
-Submissions Section Media Queries
+Home Submissions Section Media Queries
 ------------------------*/
 
 @media (min-width: 760px) {
@@ -539,7 +541,7 @@ textarea {
 }
 
 /*------------------------
-Agents Section
+Home Agents Section
 ------------------------*/
 .agents-section {
   padding: 3rem 10%;
@@ -618,7 +620,7 @@ Agents Section
 }
 
 /*------------------------
-Agents Section Media Queries
+Home Agents Section Media Queries
 ------------------------*/
 
 @media (min-width: 760px) {
@@ -653,7 +655,7 @@ Agents Section Media Queries
     padding: 7rem 16%;
   }
   .agents-section h2 {
-    font-size: 34px;
+    font-size: 36px;
   }
   .agents-section img {
     width: 350px;
@@ -727,7 +729,9 @@ Footer / Contact Section
   margin: 16px 0px;
 }
 
-.email, .phone, .address {
+.email,
+.phone,
+.address {
   font-size: 12px;
   padding-bottom: 1rem;
 }
@@ -756,7 +760,9 @@ Footer / Contact Section Media Queries
   .contact-section h4 {
     font-size: 26px;
   }
-  .email, .phone, .address {
+  .email,
+  .phone,
+  .address {
     font-size: 14px;
   }
 }
@@ -772,6 +778,302 @@ Footer / Contact Section Media Queries
     font-size: 18px;
   }
   .about-button {
+    padding: 15px 42px;
+  }
+}
+
+/*------------------------
+About Page
+------------------------*/
+
+.about-text h3 {
+  font-size: 20px;
+  padding: 4rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+/*------------------------
+About Page Media Queries
+------------------------*/
+
+@media (min-width: 1000px) {
+  .about-text h3 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-text h3 {
+    font-size: 30px;
+  }
+}
+
+/*------------------------
+Authors Page
+------------------------*/
+
+.authors-book-text {
+  background-color: var(--beige);
+  padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+  margin: 25px 0px 55px 0px;
+  font-size: 10px;
+  border-radius: 35px;
+  border: 2px solid var(--d-green);
+}
+
+.authors-submit-info {
+  margin: 50px 0px 100px 0px;
+  background-color: var(--d-green);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.authors-submit-text {
+  font-size: 22px;
+  color: var(--beige);
+  font-weight: 500;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.authors-submit-button {
+  background-color: var(--green);
+  color: var(--grey);
+  font-family: var(--paras);
+  font-weight: 700;
+  padding: 6px 22px;
+  border: 1px solid var(--green);
+  letter-spacing: 0.5px;
+  box-shadow: 2px 3px 3px var(--d-green);
+  margin-bottom: 1rem;
+}
+
+.authors-submit-button:hover {
+  box-shadow: none;
+  transition: all 0.5s;
+  font-size: 16px;
+}
+
+/*------------------------
+Authors Page Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .authors-book-text {
+    padding: 3rem 2.5rem 3rem 2.5rem;
+    margin: 25px 0px 75px 0px;
+    font-size: 11px;
+    border-radius: 60px;
+  }
+  .authors-submit-info {
+    padding: 1.5rem 0rem;
+    margin: 100px 0px 150px 0px;
+  }
+  .authors-submit-text {
+    font-size: 26px;
+  }
+  .authors-submit-button {
+    padding: 10px 38px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .authors-book-text {
+    padding: 3rem 2.5rem 3rem 2.5rem;
+    margin: 25px 0px 75px 0px;
+    font-size: 13px;
+    border-radius: 60px;
+    opacity: 30%;
+  }
+  .authors-book-text:hover {
+    transition: 0.7s linear;
+    opacity: 100%;
+  }
+  .authors-submit-text {
+    font-size: 28px;
+  }
+  .authors-submit-button {
+    padding: 12px 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .authors-book-text {
+    padding: 4rem 3.5rem 4rem 3.5rem;
+    font-size: 15px;
+    border-radius: 60px;
+  }
+  .authors-submit-text {
+    font-size: 30px;
+  }
+  .authors-submit-button {
+    padding: 15px 42px;
+  }
+}
+
+/*------------------------
+Submissions Page
+------------------------*/
+
+.submissions-section {
+  padding: 3rem 10%;
+}
+
+.submissions-section h2 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+.submissions-section p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/*------------------------
+Submissions Form 
+------------------------*/
+fieldset {
+  border: 2px solid var(--l-green);
+  margin: 2em;
+  padding: 1em 2em;
+  min-width: 200px;
+}
+
+label {
+  display: flex;
+  margin-top: 1em;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+input {
+  padding: 0.5em;
+  border: solid var(--l-green);
+}
+
+textarea {
+  min-height: 8em;
+  min-width: 100%;
+  padding: 0.5em;
+  border: solid var(--l-green);
+}
+
+/*------------------------
+Submissions Page Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .submissions-section {
+    padding: 5rem 14%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .submissions-section h2 {
+    font-size: 34px;
+  }
+  .submissions-section p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .submissions-section {
+    padding: 7rem 16%;
+  }
+  .submissions-section h2 {
+    font-size: 36px;
+  }
+  .submissions-section p {
+    font-size: 18px;
+  }
+}
+
+/*------------------------
+Contact Page
+------------------------*/
+
+.contact-page-section {
+  padding: 3rem 10%;
+}
+
+.contact-page-section h2 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+.contact-page-section p {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.contact-page-section button {
+  background-color: var(--green);
+  color: var(--grey);
+  font-family: var(--paras);
+  font-weight: 700;
+  padding: 6px 32px;
+  border: 1px solid var(--green);
+  letter-spacing: 0.5px;
+  box-shadow: 2px 3px 3px var(--d-green);
+}
+
+.contact-page-section button:hover {
+  box-shadow: none;
+  transition: all 0.5s;
+  font-size: 16px;
+}
+
+.contact-page-section a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/*------------------------
+Contact Page Media Queries
+------------------------*/
+
+@media (min-width: 760px) {
+  .contact-page-section {
+    padding: 5rem 14%;
+  }
+  .contact-page-section button {
+    padding: 10px 38px;
+    margin: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact-page-section h2 {
+    font-size: 34px;
+  }
+  .contact-page-section p {
+    font-size: 16px;
+  }
+  .contact-page-section button {
+    padding: 12px 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact-page-section {
+    padding: 7rem 16%;
+  }
+  .contact-page-section h2 {
+    font-size: 36px;
+  }
+  .contact-page-section p {
+    font-size: 18px;
+  }
+  .contact-page-section button {
     padding: 15px 42px;
   }
 }
