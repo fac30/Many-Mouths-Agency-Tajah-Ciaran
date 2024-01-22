@@ -193,9 +193,15 @@ Home About Section
   padding: 3rem 10%;
 }
 
-.about-section h2 {
+.about-section h1 {
   font-size: 26px;
   padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
+.about-text h2 {
+  font-size: 20px;
+  padding: 1rem 0rem 1rem 0rem;
   font-weight: 500;
 }
 
@@ -269,6 +275,12 @@ Home Authors Section
 
 .authors-section {
   padding: 3rem 10%;
+}
+
+.authors-section h1 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
 }
 
 .authors-section h2 {
@@ -540,6 +552,9 @@ textarea {
   border: solid var(--l-green);
 }
 
+hr{
+  margin-top: 20px ;
+}
 /*------------------------
 Home Agents Section
 ------------------------*/
@@ -553,6 +568,12 @@ Home Agents Section
   font-weight: 500;
 }
 
+.agents-section h1 {
+  font-size: 26px;
+  padding: 0rem 0rem 0.8rem 0rem;
+  font-weight: 500;
+}
+
 .agents-text {
   padding: 0rem 0rem 3rem 0rem;
   font-size: 14px;
@@ -560,13 +581,8 @@ Home Agents Section
   letter-spacing: 0.5px;
 }
 
-.home-agent-profiles h4 {
-  padding: 16px 0px;
-  font-size: 15px;
-  border-bottom: 1px solid #435f48;
-}
 
-.home-agent-profiles h3 {
+.home-agent-profiles h2 {
   padding: 22px 0px;
   font-size: 32px;
   color: var(--d-green);
@@ -717,7 +733,7 @@ Footer / Contact Section
   color: var(--beige);
 }
 
-.contact-details h4 {
+.contact-details h3 {
   font-size: 22px;
   border-bottom: 2px solid var(--d-green);
   padding: 2rem 0rem 0.5rem 0rem;
@@ -919,7 +935,7 @@ Submissions Page
   padding: 3rem 10%;
 }
 
-.submissions-section h2 {
+.submissions-section h1 {
   font-size: 26px;
   padding: 0rem 0rem 0.8rem 0rem;
   font-weight: 500;

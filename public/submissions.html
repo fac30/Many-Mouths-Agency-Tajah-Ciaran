@@ -19,31 +19,31 @@
         <main>
             <!------------- Navigation ------------->
             <nav>
-               <a href="../index.html"><img src="../img/Many Mouths Logo.png" class="logo" alt="Many Mouths Logo"></a>
-                 <ul class="nav-menu">
-                   <li class="nav-item">
-                      <a href="about.html">About Us</a>
-                   </li>
-                   <li class="nav-item">
-                      <a href="writers.html">Our Authors</a>
-                   </li>
-                   <li class="nav-item">
-                      <a href="agents.html">Our Agents</a>
-                   </li>
-                   <li class="nav-item">
-                      <a href="submissions.html">Submissions</a>
-                   </li>
-                   <li class="nav-item">
-                      <a href="contact.html">Contact</a>
-                   </li>
-                 </ul>
-              </nav>
+              <a href="../index.html"><img src="../img/Many Mouths Logo.png" class="logo" aria-label="Many Mouths Logo - click to return to landing page"></a>
+                <ul class="nav-menu">
+                  <li class="nav-item">
+                     <a href="about.html" aria-label="link to about us page">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="writers.html" aria-label="link to authors page">Our Authors</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="agents.html" aria-label="link to agents page">Our Agents</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="submissions.html" aria-label="link to submissions page">Submissions</a>
+                  </li>
+                  <li class="nav-item">
+                     <a href="contact.html" aria-label="link to contact page">Contact</a>
+                  </li>
+                </ul>
+             </nav>
     </header>
 
     <body>
       <!----------- Submissions Section ----------->
       <section class="submissions-section">
-       <h2>Submissions</h2>
+       <h1>Submissions</h1>
        <p>We strive to make our submissions process as straightforward as possible. Please fill out the contact form below, and a member of our team will get back to you if we would like to learn more about your story.</p>
        <form class="form">
            <fieldset>
@@ -66,9 +66,12 @@
                <label for="choice3">Post</label>
                <input type="radio" name="contact" value="Post" id="choice3">   
            </div>
-           <!--I want to change this to max 2000 words when we get started on the javascript bit-->
-           <label for="textbox">5000 character synopsis here:</label>
-           <textarea id="synopsis" name="synopsis" minlength="1" maxlength="5000"></textarea>
+           
+           <label for="synopsis">1000 word synopsis here:</label>
+            <textarea id="synopsis" name="synopsis" rows="10" cols="50" oninput="updateWordCount()"></textarea>
+            <button type="button" onclick="limitAndDisplay()">Limit Words</button>
+            <p id="outputText"></p>
+            <p id="wordCount">Word Count: 0</p>
 
            <label for="marketingConsent">Do you consent to marketing from Many Mouths? (We will only send you relevant literary information.)</label>
            <input type="checkbox" id="marketingConsent" name="marketingConsent">
@@ -89,40 +92,40 @@
         <p>Beyond the business of books, Many Mouths is a community—a gathering place for authors, readers, and literary enthusiasts to connect, collaborate, and celebrate the magic of storytelling. Join us in exploring the vibrant world of literature, where every voice contributes to the symphony of human expression.</p>
         </div>
 
-        <div class="contact-details">
-            <h4>Contact Us</h4> 
-              <p class="email">ManyMouthsQueries@fakeemail.com</p>
-              <p class="phone">+44 74547 46382</p>
-              <div class="address">
-                  <p>Writer's House</p>
-                  <p>Imaginary Avenue</p>
-                  <p>London F4 K3</p>
-              </div>
+        <address class="contact-details">
+          <h3>Contact Us</h3> 
+            <p class="email">ManyMouthsQueries@fakeemail.com</p>
+            <p class="phone">+44 74547 46382</p>
+            <div class="address">
+                <p>Writer's House</p>
+                <p>Imaginary Avenue</p>
+                <p>London F4 K3</p>
+            </address>
             </div>
 
-        <ul class="socials">
-            <li class="social-link">
+            <ul class="socials">
+              <li class="social-link">
                 <a
                   href="https://www.facebook.com/"
-                  target="_blank">
+                  target="_blank" aria-label="link to facebook">
                   <i class="fa-brands fa-facebook"></i></a>
             </li>
             <li class="social-link">
                 <a
                   href="https://twitter.com/?lang=en"
-                  target="_blank">
+                  target="_blank" aria-label="link to X / Twitter">
                   <i class="fa-brands fa-square-x-twitter"></i></a>
             </li>
             <li class="social-link">
                 <a
                   href="https://www.instagram.com"
-                  target="_blank">
+                  target="_blank" aria-label="link to instagram">
                   <i class="fa-brands fa-instagram social-icon"></i></a>
             </li>
         </ul>
     </section>
         <p class="footer-bottom">Created by Ciaran and Tajah - FAC30a</p>
     </footer>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>
