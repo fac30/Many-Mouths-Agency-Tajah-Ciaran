@@ -16,12 +16,12 @@ Built using Visual Studio Code with:
 * CSS 
 * Vanilla JavaScript
 
-Some tools which has helped me in my design process:
+Some tools which has helped us in our design process:
 * [Colour Hunt](https://colorhunt.co/) - colour pallete theme;
 * [Google Fonts](https://fonts.google.com/) - typography;
 * [Canva](https://www.canva.com/) - creating book covers;
 * [Unsplash](https://unsplash.com/) - images for our agents;
-* [Font Awesome](https://fontawesome.com/) -  icons for socials and contact;
+* [Font Awesome](https://fontawesome.com/) -  icons for socials and;
 
 
 - - - 
