@@ -23,6 +23,9 @@ Some tools which has helped us in our design process:
 * [Unsplash](https://unsplash.com/) - images for our agents;
 * [Font Awesome](https://fontawesome.com/) -  icons for socials;
 
-
+This website can be navigated using voiceover commands.
+* On Mac, you can activate Voiceover by pressing ⌘ command + F5 (or opening System Preferences and navigating to Accessibility > VoiceOver > Enable VoiceOver).
+* On Windows 10, you can activate Narrator by pressing the Windows logo key + control + ⮐.
+* On Linux, you should be able to run the orca command in your terminal to start it.
 - - - 
 _This website was built for a Founders & Coders project created by Tajah and Ciaran FAC30a._
