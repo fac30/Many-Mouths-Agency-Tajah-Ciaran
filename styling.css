@@ -16,6 +16,7 @@ Settings
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html {
@@ -53,6 +54,10 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: #f2f1eb;
+}
+
+img {
+  overflow: hidden;
 }
 
 button {
@@ -388,11 +393,6 @@ Home Authors Section Media Queries
     margin: 25px 0px 75px 0px;
     font-size: 13px;
     border-radius: 60px;
-    opacity: 30%;
-  }
-  .book-text:hover {
-    transition: 0.7s linear;
-    opacity: 100%;
   }
 }
 
@@ -544,10 +544,6 @@ textarea {
   min-width: 100%;
   padding: 0.5em;
   border: solid var(--l-green);
-}
-
-hr {
-  margin-top: 20px ;
 }
 
 /*------------------------
@@ -836,6 +832,7 @@ Authors Page
   background-color: var(--d-green);
   border-radius: 10px;
   text-align: center;
+  padding: 1rem;
 }
 
 .authors-submit-text {
@@ -896,11 +893,6 @@ Authors Page Media Queries
     margin: 25px 0px 75px 0px;
     font-size: 13px;
     border-radius: 60px;
-    opacity: 30%;
-  }
-  .authors-book-text:hover {
-    transition: 0.7s linear;
-    opacity: 100%;
   }
   .authors-submit-text {
     font-size: 28px;
@@ -935,6 +927,10 @@ Agents Page
   font-size: 26px;
   padding: 0rem 0rem 0.8rem 0rem;
   font-weight: 500;
+}
+
+hr {
+  margin: 60px 0px;
 }
 
 /*------------------------
